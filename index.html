@@ -37,6 +37,7 @@
 	<br/>
 	<br/>
 	{{todos}}
+	<!-- This code is broken, and I dont' know why -->
 	<tr ng-repeat="todo in todos | filter:todo.{{todo.done}}" ng-model-instant>
 		<td>{{todo.text}}</td>
 	</tr>
