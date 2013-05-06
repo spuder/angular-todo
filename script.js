@@ -3,12 +3,14 @@ function SpencersTodoController ($scope) {
 
 	$scope.todos = [
 		{text:'Clean desk', done:false}, 
-		{text:'Beat counterstrike', done:false}
+		{text:'Beat Portal', done:true},
+		{text:'Take over world', done:false}
 	]
 
 	$scope.getTotalTodos = function() {
 			return $scope.todos.length;
 	}
+
 
 	$scope.addTodo = function() {
 		// Takes value in "confirmed" and adds it to "todos" array
