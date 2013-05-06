@@ -1,0 +1,49 @@
+<!doctype.html>
+<!-- Based on this youtube tutorial 
+	http://www.youtube.com/watch?v=WuiHuZq_cg4&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D -->
+<!-- 'ng-app' is what actually triggers the library -->
+<html ng-app> 
+<head>
+	<script src="http://code.angularjs.org/angular-1.0.0rc3.min.js"></script>
+	<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+	<script src="script.js"></script> 
+	<link rel="stylesheet" type="text/css" href="cssreset.css"/>
+	<link rel="stylesheet" type="text/css" href="todo.css"/>
+
+</head>
+<div ng-controller="SpencersTodoController">
+	<h2>Total Todo's: {{getTotalTodos()}}</h2>
+
+<ul> 
+	<!-- Loops through all items in the 'todos' array -->
+	<li ng-repeat="aTodo in todos">
+		<!-- ng-model directive creates 2 way binding (presentation <-> controller) to the done attribue of the todo array item -->
+		<input type="checkbox" ng-model="todo.done"> </input>
+		<!-- Magic. Sets span's class to either 'done-true' or 'done-false' depending on what the object attribute is. So cool-->
+		<span class="done-{{todo.done}}"> {{aTodo.text}}  </span>
+	</li>
+</ul>
+	<form class="form-horizontal">
+		<!-- ng-model="confirmed" creates a 2 way binding to a "confirmed object" -->
+		<!-- ng-model-instant updates "confirmed" instantly.  -->
+		<!-- It still works without it, but doesn't update until you click -->
+		<input type="text" ng-model="confirmed" ng-model-instant>
+		<button class="btn" ng-click="addTodo()">
+			<i class="icon-plus"></i>Add
+		</button>
+		<button class="btn" ng-click="removeTodos()"><i class="icon-trash"></i>Clear Completed</button>
+	</form>
+		{{confirmed}}
+	<br/>
+	<br/>
+	{{todos}}
+	<tr ng-repeat="todo in todos | filter:todo.{{todo.done}}" ng-model-instant>
+		<td>{{todo.text}}</td>
+	</tr>
+
+</div>
+
+
+
+<html>
+<!--http://www.youtube.com/watch?v=WuiHuZq_cg4&list=PL173F1A311439C05D&context=C48ac877ADvjVQa1PpcFONnl4Q5x8hqvT6tRBTE-m0-Ym47jO3PEE%3D-->

@@ -1,0 +1,51 @@
+
+			/* Jade C. Rigby's CSS Reset; www.jaderigby.com */
+			* {
+				margin: 0;
+				padding: 0;
+				outline: none; /* removes the "default" dotted outline from firefox link clicks */
+			}
+			
+			/* among other things, helps ie play nice with fonts across browsers */
+			body { 
+				font-size: 100%;
+				line-height: 18px;
+			}
+			
+			/*** add 'cellspacing="0"' to html ***/
+			table {
+				border-collapse: collapse;
+				border-spacing: 0;
+				vertical-align: baseline;
+			}
+			
+			ol, ul {
+				list-style: none;
+			}
+			
+			h1 {
+				font-size: 2em; /* 32px */
+				margin-bottom: 10px;
+			}
+			
+			h2 {
+				font-size: 1.5em; /* 24px */
+			}
+			
+			h3 {
+				font-size: 1.17em; /* 18.75px; pixel percentages influence positioning in some browsers */
+			}
+			
+			h4 {
+				font-size: 1em; /* 16px */
+			}
+			
+			h5 {
+				font-size: 0.83em; /* 13.25px */
+			}
+			
+			h6 {
+				font-size: 0.67em; /* 10.75px */
+			}
+			
+			/* end CSS Reset */
