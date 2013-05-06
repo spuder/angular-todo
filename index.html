@@ -16,11 +16,12 @@
 
 <ul> 
 	<!-- Loops through all items in the 'todos' array -->
-	<li ng-repeat="todo in todos">
+	<li ng-repeat="aTodo in todos">
 		<!-- ng-model directive creates 2 way binding (presentation <-> controller) to the done attribue of the todo array item -->
-		<input type="checkbox" ng-model="todo.done"> 
+		<!-- The model name, needs to match the object name "aTodo" -->
+		<input type="checkbox" ng-model="aTodo.done"> 
 		<!-- Magic. Sets span's class to either 'done-true' or 'done-false' depending on what the object attribute is. So cool-->
-		<span class="done-{{todo.done}}"> {{todo.text}}  </span>
+		<span class="done-{{aTodo.done}}"> {{aTodo.text}}  </span>
 	</li>
 </ul>
 	<form class="form-horizontal">
