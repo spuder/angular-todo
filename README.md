@@ -9,4 +9,4 @@ http://www.youtube.com/watch?v=WuiHuZq_cg4&list=PL173F1A311439C05D&context=C48ac
 Whatever the origional license was on the youtube video
 
 # Screenshot
-![Screenshot](https://raw.github.com/spudstud/angular-todo/master/img/screenshot.png)
+![Screenshot](https://raw.github.com/spudstud/angular-todo/master/screenshot.png)
